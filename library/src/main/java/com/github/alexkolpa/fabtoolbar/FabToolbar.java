@@ -139,6 +139,7 @@ public class FabToolbar extends RevealFrameLayout {
 			animator.addListener(listener);
 		}
 		animator.start();
+
 	}
 
 	@Override
@@ -200,6 +201,7 @@ public class FabToolbar extends RevealFrameLayout {
 		@Override
 		public void onAnimationEnd() {
 			container.setVisibility(GONE);
+            button.setVisibility(VISIBLE);
 			button.setOnClickListener(new ButtonClickListener());
 		}
 
