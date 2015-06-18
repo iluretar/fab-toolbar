@@ -116,6 +116,7 @@ public class FabToolbar extends RevealFrameLayout {
 
 	public void show() {
 		button.setOnClickListener(null);
+		button.setVisibility(GONE);
 		container.setVisibility(VISIBLE);
 		animateCircle(0, screenWidth, null);
 	}
