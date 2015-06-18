@@ -1,6 +1,7 @@
 package com.github.alexkolpa.fabtoolbar;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
@@ -83,7 +84,7 @@ public class FabToolbar extends RevealFrameLayout {
 	}
 
 	public void setColor(int color) {
-        button.setBackgroundColor(color);
+        button.setBackgroundTintList(ColorStateList.valueOf(color));
 		container.setBackgroundColor(color);
 	}
 
