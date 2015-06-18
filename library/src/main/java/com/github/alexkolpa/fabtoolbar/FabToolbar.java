@@ -4,19 +4,17 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
-import android.widget.AbsListView;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import com.melnykov.fab.FloatingActionButton;
 import io.codetail.animation.SupportAnimator;
 import io.codetail.animation.ViewAnimationUtils;
 import io.codetail.widget.RevealFrameLayout;
+import android.support.design.widget.FloatingActionButton;
 
 public class FabToolbar extends RevealFrameLayout {
 
@@ -85,8 +83,7 @@ public class FabToolbar extends RevealFrameLayout {
 	}
 
 	public void setColor(int color) {
-		button.setColorNormal(color);
-		button.setColorPressed(color);
+        button.setBackgroundColor(color);
 		container.setBackgroundColor(color);
 	}
 
@@ -98,13 +95,6 @@ public class FabToolbar extends RevealFrameLayout {
 		clickListener = listener;
 	}
 
-	public void attachToListView(AbsListView listView) {
-		button.attachToListView(listView);
-	}
-
-	public void attachToRecyclerView(RecyclerView recyclerView) {
-		button.attachToRecyclerView(recyclerView);
-	}
 
 	public void setButtonIcon(Drawable drawable) {
 		button.setImageDrawable(drawable);
@@ -122,8 +112,7 @@ public class FabToolbar extends RevealFrameLayout {
 	}
 
 	public void hide() {
-		//If button was attached to list and got hidden, closing the toolbar should still show the button
-		button.show(false);
+
 		animateCircle(screenWidth, 0, new ToolbarCollapseListener());
 	}
 
