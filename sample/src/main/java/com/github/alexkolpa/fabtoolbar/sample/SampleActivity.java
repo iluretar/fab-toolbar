@@ -31,7 +31,6 @@ public class SampleActivity extends ActionBarActivity implements View.OnClickLis
 
 		ListView listView = (ListView) findViewById(R.id.list_view);
 		fillListView(listView);
-		fabToolbar.attachToListView(listView);
 	}
 
 	@Override
