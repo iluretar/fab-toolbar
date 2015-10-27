@@ -15,13 +15,12 @@
 			/>
 
 	<com.github.alexkolpa.fabtoolbar.FabToolbar
-			android:id="@+id/fab_toolbar"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_gravity="bottom"
-			tb:tb_button_gravity="end"
-			tb:tb_container_gravity="center"
-			>
+		android:id="@+id/fab_toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom"
+		tb:tb_button_gravity="end"
+		tb:tb_container_gravity="center">
 
 		<ImageView
 				android:id="@+id/attach"

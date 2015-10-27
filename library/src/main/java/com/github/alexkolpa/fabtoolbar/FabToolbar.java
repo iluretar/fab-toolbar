@@ -109,12 +109,13 @@ public class FabToolbar extends RevealFrameLayout {
 		button.setOnClickListener(null);
 		button.setVisibility(GONE);
 		container.setVisibility(VISIBLE);
-		animateCircle(0, screenWidth, null);
+        int radius = button.getWidth()/2;
+		animateCircle(radius, screenWidth, null);
 	}
 
 	public void hide() {
-
-		animateCircle(screenWidth, 0, new ToolbarCollapseListener());
+        int radius = button.getWidth()/2;
+		animateCircle(screenWidth, radius, new ToolbarCollapseListener());
 	}
 
 	private void animateCircle(float startRadius, float endRadius, SupportAnimator.AnimatorListener listener) {
